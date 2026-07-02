@@ -1,132 +1,110 @@
-# CISCO-AICTE-Virtual-Internship-2025-PROJECTS
+# 🌐 NetPath Illuminator — The Network Odyssey
+### Cisco AICTE Virtual Internship Program (VIP) 2025 — Networking Track
 
-# 🌐 NetPath Illuminator – The Network Odyssey
+> 🚀 *Selected participant, Cisco VIP 2025 — Industry Networking Project Challenge*
 
-> 🚀 *Selected for the Cisco VIP 2025 Program - Industry Networking Project Challenge*
+A level-based simulation project covering the progressive networking stack — from basic PC-to-PC connectivity through static/dynamic routing, VLAN segmentation, and ACL/NAT security policy — built and verified in **Cisco Packet Tracer**.
 
-Welcome to the NetPath Illuminator project — a level-based, gamified simulation that visualizes the journey of network packets across complex topologies using **Cisco Packet Tracer**. This project was developed as part of the **VIP 2025 Cisco Networking Industry Problem Statement**, where I was **officially selected to participate** and contribute innovative solutions.
-
----
-
-## 🎯 Objective
-
-To simulate the progressive learning path of network communication from basic connectivity to complex routing and security mechanisms — implemented in **8 levels** using Packet Tracer.
+📄 [Full Project Report (PDF)](CISCO%20VIP%20-Final%20Report.pdf)
 
 ---
 
-## 🧩 Project Structure
+## 📁 Repository Structure
 
-```bash
-NetPath-Illuminator/
-├── level1/       # PC-to-PC ping test
-├── level2/       # Static Routing
-├── level3/       # Dynamic Routing (RIP)
-├── level4/       # Dynamic Routing (OSPF)
-├── level5/       # VLAN Configuration
-├── level6/       # Inter-VLAN Routing
-├── level7/       # ACL & NAT Configuration
-├── level8/       # End-to-End Traceroute Testing
-└── reports/      # Final PDF report
-````
+```
+Cisco_vip_2025-Projects/
+├── level1.pkt              # PC-to-PC connectivity
+├── level2.pkt              # Static routing
+├── level3.pkt              # Dynamic routing (RIP v2)
+├── level4.pkt              # Dynamic routing (OSPF)
+├── level5.pkt              # VLAN configuration
+├── level6.pkt              # Inter-VLAN routing
+├── level7.pkt              # ACL & NAT
+├── level8.pkt              # End-to-end traceroute validation
+├── screenshots/            # Topology + verification screenshots per level
+├── configs/                # Exported "show run" CLI configs per level (.txt)
+├── CISCO VIP -Final Report.pdf
+└── README.md
+```
 
----
-
-## 🧠 Levels Explained
-
-### 🔹 Level 1 – PC to PC Communication
-
-* **Goal:** Establish direct ping communication between two PCs.
-* **Skills:** IP addressing, subnetting, basic topology.
-* **Tools:** PC, Switch, Straight-through cables.
-
-### 🔹 Level 2 – Static Routing
-
-* **Goal:** Manually configure routes between 3 routers.
-* **Skills:** IP tables, subnet division, `ip route` command.
-* **Routing Protocol:** Static
-* **Devices:** 3 Routers, 3 Switches, 6 PCs.
-
-### 🔹 Level 3 – Dynamic Routing with RIP
-
-* **Goal:** Automate route discovery using RIP v2.
-* **Skills:** Dynamic routing configuration.
-* **Command:** `router rip`, `network`, `version 2`.
-
-### 🔹 Level 4 – OSPF Routing
-
-* **Goal:** Implement OSPF across multi-router topology.
-* **Skills:** Area 0 setup, advanced routing logic.
-* **Command:** `router ospf 1`, `network`, `area`.
-
-### 🔹 Level 5 – VLAN Configuration
-
-* **Goal:** Create isolated networks in a LAN using VLANs.
-* **Skills:** VLAN creation, port assignment, inter-switch trunking.
-
-### 🔹 Level 6 – Inter-VLAN Routing
-
-* **Goal:** Allow communication between different VLANs.
-* **Skills:** Router-on-a-stick configuration, Sub-interfaces.
-
-### 🔹 Level 7 – Access Control List (ACL) and NAT
-
-* **Goal:** Restrict traffic and allow private-public IP mapping.
-* **Skills:** Standard/Extended ACLs, NAT configuration.
-* **Security Logic:** Deny/Permit policies, `access-list`, `nat inside/outside`.
-
-### 🔹 Level 8 – End-to-End Traceroute + Final Output
-
-* **Goal:** Simulate full-scale routing across all levels with traceroute verification.
-* **Skills:** Debugging with `tracert`, ICMP flow visualization, path validation.
+> **Note:** `.pkt` files require [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) to open. The `screenshots/` and `configs/` folders let you review the work without installing it.
 
 ---
 
+## 🧠 Levels
+
+### Level 1 — PC-to-PC Communication
+- **Goal:** Establish direct ping connectivity between two end devices.
+- **Skills:** IP addressing, subnetting, basic topology design.
+- **Devices:** 2 PCs, 1 Switch.
+
+### Level 2 — Static Routing
+- **Goal:** Manually configure routes across a 3-router topology.
+- **Skills:** Routing tables, subnet planning, `ip route`.
+- **Devices:** 3 Routers, 3 Switches, 6 PCs.
+
+### Level 3 — Dynamic Routing (RIP v2)
+- **Goal:** Automate route discovery.
+- **Commands:** `router rip`, `network`, `version 2`.
+
+### Level 4 — Dynamic Routing (OSPF)
+- **Goal:** Implement OSPF across a multi-router topology with area design.
+- **Commands:** `router ospf 1`, `network ... area 0`.
+- **Verification:** Simulated link failure to confirm route reconvergence to a backup path.
+
+### Level 5 — VLAN Configuration
+- **Goal:** Segment a LAN into isolated broadcast domains.
+- **Skills:** VLAN creation, access port assignment, trunking between switches.
+
+### Level 6 — Inter-VLAN Routing
+- **Goal:** Enable controlled communication between VLANs.
+- **Skills:** Router-on-a-stick, sub-interface configuration.
+
+### Level 7 — ACL & NAT
+- **Goal:** Enforce traffic policy and map private-to-public addressing.
+- **Skills:** Standard/extended ACLs, NAT inside/outside.
+
+### Level 8 — End-to-End Verification
+- **Goal:** Validate full-path connectivity and routing across all prior levels.
+- **Skills:** `tracert`, ICMP path debugging, systematic fault isolation.
+
+---
 
 ## 🛠 Tools & Technologies
 
-* **Cisco Packet Tracer**
-* **Networking Protocols:** RIP, OSPF, VLAN, NAT, ACL
-* **Documentation:** Lucidchart, MS Word/PDF
-* **Version Control:** Git & GitHub
+- **Simulation:** Cisco Packet Tracer
+- **Protocols:** RIP v2, OSPF, VLAN trunking, ACL, NAT, ARP, ICMP
+- **Documentation:** MS Word/PDF, Markdown
+- **Version Control:** Git & GitHub
 
 ---
 
-## 🧠 Learnings
+## 🧠 Key Takeaways
 
-* Deep understanding of OSI & TCP/IP models
-* Implementation of real-world routing strategies
-* Problem-solving using simulation tools
-* Documentation & logical network design
-* Security concepts in Layer 3 networking
-
----
+- Practical grounding in OSI/TCP-IP layered troubleshooting
+- Hands-on static and dynamic routing protocol configuration and convergence behavior
+- LAN segmentation and inter-VLAN routing design
+- Security policy enforcement via ACL/NAT
+- Structured technical documentation of network builds and fixes
 
 ## 🌱 Future Scope
 
-* Convert simulation into a real-time physical router setup
-* Integrate SDN (Software Defined Networking)
-* Use Wireshark to capture and analyze packets
-* Add dashboard-based monitoring using Python + Tkinter
+- Migrate simulated topology to physical/virtual router lab (EVE-NG or GNS3)
+- Capture and analyze live traffic with Wireshark per level
+- Add a Python-based dashboard for route/link status monitoring
 
 ---
 
 ## 📄 License
 
-Licensed under the [MIT License]
-
----
+MIT License — see [LICENSE](LICENSE)
 
 ## 🙋‍♀️ About Me
 
-**Kaviya Murugan**
-Final Year B.E. ECE (Hons) | Cisco VIP 2025 Selected
-🌐 Passionate about Networking, Software Development & AI
-📍 India
-🔗 [LinkedIn](https://linkedin.com/in/kaviyamurugan) | [GitHub](https://github.com/kaviya-3016)
+**Kaviya Murugan** — B.E. (Hons.) Electronics & Communication Engineering | Cisco VIP 2025 Selected Participant
+
+🔗 [LinkedIn](https://www.linkedin.com/in/kaviya-murugan/) · [GitHub](https://github.com/Kaviya-3016) 
 
 ---
 
-> ⭐ If you found this helpful, don’t forget to star the repo!
-
-
-
+⭐ If this was useful as a reference, consider starring the repo.
